@@ -1,0 +1,592 @@
+body {
+    margin: 0;
+    font-family: "Poppins";
+}
+
+nav {
+    background-color: #E6C69B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 50px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 50px;
+}
+
+.logo-name {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.links-container {
+    display: flex;    
+    gap: 30px;        
+    justify-content: flex-end;
+}
+
+.nav-link {
+    color: #000000;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: "Poppins";
+    font-weight: 600;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 5px;
+    background-color: green;
+    border-radius: 10px;
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-link.active::after {
+    transform: scaleX(1);
+    background-color: red;
+}
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+
+    margin-top: -30px;
+    z-index: 1; 
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    color: white;
+}
+
+
+.hero-content h1{
+    font-family: "Poppins";
+    font-size: 60px;
+    color: #4D372F;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-family: "Poppins";
+    color: #4D372F;
+    font-weight: 550;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+.explore-menu-btn {
+    background-color: #2C5439;
+    font-family:"Poppins";
+    color: white;
+    font-weight: 600;
+    width: 220px;
+    height: 60px;
+    margin-left: 200px;
+    margin-top: 20px;
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.explore-menu-btn:hover {
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.handang-pinoy-container {
+    margin: 20px 0px 100px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.handang-pinoy-section{
+    position: relative;
+}
+
+.handang-pinoy-decor{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    pointer-events:none;
+}
+
+
+.banderitas1 {
+    position: absolute;
+    top: -20%;
+    right: 0%;
+    z-index: 0;
+}
+
+.banderitas1 img {
+    width: 700px;
+    height: auto;
+}
+
+.banderitas2 {
+    position: absolute;
+    top: 97%;
+    left: 0%;
+    z-index: 0;
+}
+
+.banderitas2 img {
+    width: 450px;
+    height: auto;
+}
+
+.bilao {
+    position: absolute;
+    top: 95%;
+    right: 0%;
+    z-index: 0;
+}
+
+.bilao img {
+    width: 120px;
+    height: auto;
+}
+
+.dahon1 {
+    position: absolute;
+    top: 215%;
+    left: 0%;
+    z-index: 0;
+}
+
+.dahon1 img {
+    width: 280px;
+    height: auto;
+}
+
+
+.spon-fork {
+    position: absolute;
+    top: 240%;
+    right: 0%;
+    z-index: 0;
+}
+
+.spon-fork img {
+    width: 180px;
+    height: auto;
+}
+
+.dahon2 {
+    position: absolute;
+    top: 340%;
+    right: 0%;
+    z-index: 0;
+}
+
+.dahon2 img {
+    width: 180px;
+    height: auto;
+}
+
+
+.handang-pinoy-container h1,
+.handang-pinoy-container p,
+.handang-pinoy-img-card {
+    position: relative;
+    z-index: 2;
+}
+
+section,
+.handang-pinoy-container,
+.handaan-highlight-container,
+.fiesta-packages-container{
+    padding-left:5%;
+    padding-right:5%;
+}
+
+.handang-pinoy-container h1 {
+    font-family: "Poppins";
+    font-size: 60px;
+    color: #4D372F;
+    margin-bottom: 0;
+    margin-left: 50px;
+
+}
+
+.handang-pinoy-container p {
+    font-family: "Poppins";
+    color: #4D372F;
+    font-weight: 550;
+    font-size: 28px;
+    margin-top: 0;
+    margin-left: 50px;
+}
+
+.handang-pinoy-img-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+}
+
+.handang-pinoy-img-card img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.handang-pinoy-img-card img:hover {
+    transform: translateY(-10px) scale(1.06);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.35);
+}
+
+
+.handaan-highlight-container {
+    text-align: center;
+    margin: 150px 0 100px 0;
+    position: relative;
+    z-index: 0;
+}
+
+.handaan-highlight-container h1 {
+    font-family: "Poppins";
+    font-size: 60px;
+    color: #4D372F;
+    margin-bottom: 0;
+}
+
+.handaan-highlight-container p {
+    font-family: "Poppins";
+    color: #4D372F;
+    font-weight: 550;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.handaan-highlight-card {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    margin: 40px auto;
+}
+
+
+.handaan-highlight-card .card {
+    background-color: #F6E7C0;
+    width: 280px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: left;
+    text-align: justify;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+.handaan-highlight-card .card:hover {
+    transform: translateY(-8px);
+}
+
+
+.handaan-highlight-card img {
+    width: 100%;
+    height: 200px;
+    background-color: #d9c8a3;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.handaan-highlight-card h2 {
+    font-family: "Poppins";
+    font-size: 20px;
+    margin: 10px 0 5px 0;
+    color: #000000;
+}
+
+
+.handaan-highlight-card p {
+    font-family: "Poppins";
+    font-size: 15px;
+    margin: 10px 0 5px 0;
+    color: #333;
+}
+
+.fiesta-packages-container {
+    margin: 20px 0px 20px 0px;
+}
+
+.fiesta-packages-container h1{
+    font-family: "Poppins";
+    font-size: 60px;
+    color: #4D372F;
+    margin-bottom: 0;
+    margin-left: 50px;
+}
+
+.fiesta-packages-container p {
+    font-family: "Poppins";
+    color: #4D372F;
+    font-weight: 550;
+    font-size: 28px;
+    margin-top: 0;
+    margin-left: 50px;
+}
+
+
+.fiesta-packages-card {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1300px;
+    margin: 40px auto;
+
+}
+
+.fiesta-packages-card .card {
+    background-color: #F6E7C0;
+    width: 320px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: left;
+    text-align: justify;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+.fiesta-packages-card .card:hover {
+    transform: translateY(-8px);
+}
+
+.fiesta-packages-card  img {
+    width: 100%;
+    height: 200px;
+    background-color: #d9c8a3;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.fiesta-packages-card  h2 {
+    font-family: "Poppins";
+    font-size: 20px;
+    margin: 10px 0 5px 0;
+    color: #000000;
+}
+
+
+.fiesta-packages-card  p {
+    font-family: "Poppins";
+    font-size: 15px;
+    margin: 10px 0 5px 0;
+    color: #333;
+}
+
+.see-package-btn {
+    background-color: #2C5439;
+    font-family:"Poppins";
+    color: white;
+    font-weight: 600;
+    width: 160px;
+    height: 40px;
+    display: block;
+    margin: 15px auto 0 auto;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.see-package-btn:hover {
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        align-items: baseline;
+        padding: 10px 15px;
+    }
+
+    .links-container {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+        align-items: end;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    /* Hero Section */
+    .hero-content {
+        left: 20px;
+        top: 35%;
+        transform: translateY(-35%);
+        max-width: 40%;   
+        text-align: justify; 
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+        line-height: 1.2;
+        word-break: break-word; 
+    }
+
+    .hero-content p {
+        font-size: 15px;
+        line-height: 1.3;
+        text-align: justify;
+        word-break: break-word;
+    }
+
+    .explore-menu-btn {
+        width: 160px;
+        height: 45px;
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    /* Handaang Pinoy Section */
+    .handang-pinoy-container h1,
+    .handang-pinoy-container p {
+        font-size: 24px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .handang-pinoy-img-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+        justify-items: center;
+    }
+
+    .handang-pinoy-img-card img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    /* Handaan Highlight Cards */
+    .handaan-highlight-container h1 {
+        font-size: 28px;
+    }
+
+    .handaan-highlight-container p {
+        font-size: 16px;
+    }
+
+    .handaan-highlight-card {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        justify-items: center;
+    }
+
+    .handaan-highlight-card .card {
+        width: 100%;
+        max-width: 250px;
+        padding: 10px;
+    }
+
+    /* Fiesta Packages Cards */
+    .fiesta-packages-container h1 {
+        font-size: 28px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .fiesta-packages-container p {
+        font-size: 16px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .fiesta-packages-card {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        justify-items: center;
+    }
+
+    .fiesta-packages-card .card {
+        width: 100%;
+        max-width: 250px;
+        padding: 10px;
+    }
+
+    .see-package-btn {
+        width: 140px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    /* Decorative images adjustments */
+    .banderitas1 img,
+    .banderitas2 img,
+    .bilao img,
+    .dahon1 img,
+    .spon-fork img,
+    .dahon2 img {
+        width: 70%;
+        max-width: 250px;
+    }
+}
