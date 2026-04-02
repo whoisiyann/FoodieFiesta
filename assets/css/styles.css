@@ -417,6 +417,11 @@ section,
     text-align: justify;
     box-shadow: 0 8px 15px rgba(0,0,0,0.15);
     transition: transform 0.2s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* important */
+    height: 100%; /* para pantay */
 }
 
 .fiesta-packages-card .card:hover {
@@ -435,7 +440,7 @@ section,
 .fiesta-packages-card  h2 {
     font-family: "Poppins";
     font-size: 20px;
-    margin: 10px 0 5px 0;
+    margin: 0;
     color: #000000;
 }
 
@@ -443,7 +448,7 @@ section,
 .fiesta-packages-card  p {
     font-family: "Poppins";
     font-size: 15px;
-    margin: 10px 0 5px 0;
+    margin: 0;
     color: #333;
 }
 
@@ -457,7 +462,7 @@ section,
     display: flex;      
     justify-content: center; 
     align-items: center;        
-    margin: 15px auto 0 auto;
+    margin: 0 auto 0 auto;
     font-size: 20px;
     border-radius: 10px;
     border: none;
@@ -582,7 +587,7 @@ section,
     }
 
     p {
-        font-size: 20px !important;
+        font-size: 18px !important;
         margin-left: 0 !important;
         text-align: center;
     }
@@ -616,26 +621,33 @@ section,
     .handaan-highlight-card .card:last-child:nth-child(odd) {
         grid-column: span 2;
         justify-self: center;
-        width: 200px;
-        
+        width: 180px;
     }
 
     .handaan-highlight-card img {
-        height: 150px !important; 
+        height: 120px !important; 
     }
 
     .handaan-highlight-card h2 {
-        font-size: 20px !important; 
+        font-size: 16px !important; 
     }
 
     .handaan-highlight-card p {
-        font-size: 12px !important; 
+        font-size: 10px !important; 
         text-align: justify;
     }
 
     /* FIESTA PACKAGES */
     .fiesta-packages-card {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        row-gap: 40px;
+    }
+
+    .fiesta-packages-card .card:last-child:nth-child(odd) {
+        grid-column: span 2;
+        justify-self: center;
+        width: 200px;
     }
 
     .fiesta-packages-card .card {
@@ -643,18 +655,38 @@ section,
     }
 
     .fiesta-packages-card img {
-        height:300px !important; 
+        height: 150px !important; 
     }
 
     .fiesta-packages-card h2 {
-        font-size: 28px !important; 
+        font-size: 16px !important; 
     }
 
     .fiesta-packages-card p {
-        font-size: 15px !important;
+        font-size: 10px !important; 
         text-align: justify;
     }
 
+
+.see-package-btn {
+    background-color: #2C5439;
+    font-family:"Poppins";
+    color: white;
+    font-weight: bold;
+    width: 120px;
+    height: 40px;
+    display: flex;      
+    justify-content: center; 
+    align-items: center;        
+    margin: 15px auto 0 auto;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
 
     /* ===== MOBILE DECORATION ===== */
 
@@ -683,7 +715,7 @@ section,
     }
 
     .bilao{
-        top:100%;
+        top:90%;
         right:0%;
     }
 
@@ -693,17 +725,17 @@ section,
     }
 
     .dahon1{
-        top:350%;
+        top:310%;
         left:-5%;
     }
 
 
     .spon-fork img{
-        width:95px;
+        width:90px;
     }
 
     .spon-fork{
-        top:350%;
+        top:310%;
         right:0%;
     }
 
@@ -713,7 +745,7 @@ section,
     }
 
     .dahon2{
-        top:700%;
+        top:500%;
         right: 0%;
     }
 
