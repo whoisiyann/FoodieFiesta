@@ -479,6 +479,7 @@ section,
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding: 10px 20px;
     }
 
     .menu-toggle {
@@ -511,7 +512,7 @@ section,
     .links-container.show {
         margin-top: -20px;
         max-height: 300px;
-        padding: 15px 50px; 
+        padding: 15px 20px; 
     }
 
     .nav-link {
@@ -615,6 +616,7 @@ section,
     .handaan-highlight-card .card:last-child:nth-child(odd) {
         grid-column: span 2;
         justify-self: center;
+        width: 200px;
         
     }
 
@@ -681,27 +683,27 @@ section,
     }
 
     .bilao{
-        top:105%;
+        top:90%;
         right:0%;
     }
 
 
     .dahon1 img{
-        width:150px;
+        width:140px;
     }
 
     .dahon1{
-        top:350%;
-        left:-8%;
+        top:340%;
+        left:0%;
     }
 
 
     .spon-fork img{
-        width:110px;
+        width:100px;
     }
 
     .spon-fork{
-        top:350%;
+        top:340%;
         right:0%;
     }
 
@@ -711,7 +713,7 @@ section,
     }
 
     .dahon2{
-        top:690%;
+        top:670%;
         right: 0%;
     }
 
