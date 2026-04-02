@@ -683,7 +683,7 @@ section,
     }
 
     .bilao{
-        top:90%;
+        top:100%;
         right:0%;
     }
 
@@ -693,17 +693,17 @@ section,
     }
 
     .dahon1{
-        top:340%;
-        left:0%;
+        top:350%;
+        left:-5%;
     }
 
 
     .spon-fork img{
-        width:100px;
+        width:95px;
     }
 
     .spon-fork{
-        top:340%;
+        top:350%;
         right:0%;
     }
 
@@ -713,7 +713,7 @@ section,
     }
 
     .dahon2{
-        top:670%;
+        top:700%;
         right: 0%;
     }
 
