@@ -1,15 +1,31 @@
 body {
     margin: 0;
     font-family: "Poppins";
+    padding-top: 80px;
 }
 
-nav {
+.top-nav {
     background-color: #E6C69B;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     padding: 10px 50px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+
+    transition: transform 0.3s ease;
+}
+
+.nav-hidden {
+    transform: translateY(-100%);
 }
 
 .logo-container {

@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: "Poppins";
+    padding-top: 80px;
 }
 
 nav {
@@ -13,8 +14,24 @@ nav {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 
-    position: relative;
-    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;      
+    z-index: 1000;   
+    box-sizing: border-box;
+
+    transition: transform 0.3s ease;
+}
+
+.nav-hidden {
+    transform: translateY(-100%);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 .logo-container {
@@ -453,173 +470,208 @@ section,
 }
 
 
+@media (max-width: 768px) {
 
-
-
-@media screen and (max-width: 768px) {
-
-    /* Navigation */
     nav {
-        flex-direction: column;
-        align-items: baseline;
-        padding: 10px 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     .links-container {
-        flex-direction: column;
-        gap: 10px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
         width: 100%;
-        margin-top: 10px;
-        align-items: end;
+        box-sizing: border-box;
+        margin-top: -20px;
+
+        background-color: #E6C69B;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+
+        flex-direction: column;
+        align-items: flex-end; 
+        padding: 10px 20px;     
+        gap: 10px;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .links-container.show {
+        margin-top: -20px;
+        max-height: 300px;
+        padding: 15px 50px; 
     }
 
     .nav-link {
         font-size: 16px;
+        width: auto;         
+        padding: 10px 0px; 
+        text-align: left; 
     }
 
-    /* Hero Section */
+    .nav-link::after {
+        left: 0;               
+        bottom: 5px;
+        width: 100%;           
+        height: 5px;          
+        background-color: red;
+        border-radius: 10px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.25s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        transform: scaleX(1);
+    }
+
+
+    /* HERO SECTION */
+    .hero {
+        height: 103vh;
+    }
+
     .hero-content {
+        position: absolute;
+        top: 50%;
         left: 20px;
-        top: 35%;
-        transform: translateY(-35%);
-        max-width: 50%;   
-        text-align: justify; 
+        transform: translateY(-50%);
+        
+        width: 90%;
+        max-width: 200px;
+        text-align: left;
     }
 
     .hero-content h1 {
-        font-size: 30px;
-        line-height: 1.2;
-        word-break: break-word; 
+        font-size: 32px;
+        text-align: left;
     }
 
     .hero-content p {
-        font-size: 15px;
-        line-height: 1.2;
+        font-size: 18px;
         text-align: left;
-        word-break: break-word;
     }
 
     .explore-menu-btn {
+        margin-top: 15px;
+        margin-left: 0; 
         width: 160px;
         height: 45px;
         font-size: 16px;
-        margin-left: 0;
     }
 
-    /* Handaang Pinoy Section */
-    .handang-pinoy-container h1,
-    .handang-pinoy-container p {
-        font-size: 24px;
+    /* TITLES */
+    h1 {
+        font-size: 40px !important;
+        margin-left: 0 !important;
         text-align: center;
-        margin-left: 0;
     }
 
+    p {
+        font-size: 20px !important;
+        margin-left: 0 !important;
+        text-align: center;
+    }
+
+    /* HANDANG PINOY IMAGES */
     .handang-pinoy-img-card {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 15px;
-        justify-items: center;
+        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        flex-wrap: wrap; 
+        gap: 30px; 
     }
 
     .handang-pinoy-img-card img {
         width: 100%;
-        max-width: 250px;
+        max-width: 200px;
         height: auto;
+        
     }
 
-    /* Handaan Highlight Cards */
-    .handaan-highlight-container h1 {
-        font-size: 28px;
-    }
-
-    .handaan-highlight-container p {
-        font-size: 16px;
-    }
-
+    /* HANDAAN HIGHLIGHT */
     .handaan-highlight-card {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
         justify-items: center;
     }
 
     .handaan-highlight-card .card {
-        width: 100%;
-        max-width: 160px;
-        padding: 10px;
+        width: 90%;
+    }
+
+    .handaan-highlight-card .card:last-child:nth-child(odd) {
+        grid-column: span 2;
+        justify-self: center;
+        
     }
 
     .handaan-highlight-card img {
-        height: 120px;
+        height: 150px !important; 
     }
-    
+
     .handaan-highlight-card h2 {
-        font-size: 18px;
-        text-align: justify;
-        margin-left: 0;
+        font-size: 20px !important; 
     }
 
     .handaan-highlight-card p {
-        font-size: 10px;
+        font-size: 12px !important; 
         text-align: justify;
-        margin-left: 0;
     }
 
-
-    /* Fiesta Packages Cards */
-    .fiesta-packages-container h1 {
-        font-size: 28px;
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .fiesta-packages-container p {
-        font-size: 16px;
-        text-align: center;
-        margin-left: 0;
-    }
-
+    /* FIESTA PACKAGES */
     .fiesta-packages-card {
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
+        grid-template-columns: 1fr;
     }
 
     .fiesta-packages-card .card {
-        width: 100%;
-        max-width: 160px;
-        padding: 10px;
+        width: 90%;
     }
 
     .fiesta-packages-card img {
-        height: 120px;
-    }
-
-    .see-package-btn {
-        width: 140px;
-        height: 35px;
-        font-size: 14px;
+        height:300px !important; 
     }
 
     .fiesta-packages-card h2 {
-        font-size: 20px;
-        text-align: justify;
-        margin-left: 0;
+        font-size: 28px !important; 
     }
 
     .fiesta-packages-card p {
-        font-size: 10px;
+        font-size: 15px !important;
         text-align: justify;
-        margin-left: 0;
     }
 
+    /* DECORATIONS */
+    .handang-pinoy-decor {
+        display: block; 
+        transform: scale(1); 
+        transform-origin: top right;
+    }
 
-    /* Decorative images adjustments */
     .banderitas1 img,
     .banderitas2 img,
     .bilao img,
     .dahon1 img,
     .spon-fork img,
     .dahon2 img {
-        width: 70%;
-        max-width: 250px;
+        width: auto;
+        max-width: 200px; 
+        height: auto;
+    }
+
+    .dahon2 {
+        top: 570%; 
+        right: 0px; 
+        z-index: -1; 
     }
 }
+
