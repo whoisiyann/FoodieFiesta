@@ -17,8 +17,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    z-index: 1000;
+    width: 100%;      
+    z-index: 1000;   
     box-sizing: border-box;
 
     transition: transform 0.3s ease;
@@ -26,6 +26,12 @@ body {
 
 .nav-hidden {
     transform: translateY(-100%);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 .logo-container {
@@ -82,17 +88,17 @@ body {
 }
 
 /* MENU HEADER */
-.menu-container {
+.menu-header {
     padding: 30px 50px 0 50px;
     text-align: center;
 }
 
-.menu-container h1 {
+.menu-header h1 {
     font-size: 40px;
     margin: 0;
 }
 
-.menu-container nav {
+.menu-header nav {
     display: flex;
     justify-content: center;
     padding: 0;
@@ -105,7 +111,7 @@ body {
     gap: 60px;
     background: #E6C69B;
     font-size: 20px;
-    padding: 10px 20px;
+    padding: 20px 50px;
     border-radius: 10px;
     margin: 15px 0;
 }
@@ -113,6 +119,7 @@ body {
 .menu-link {
     text-decoration: none;
     color: black;
+    font-size: 20px;
     font-weight: 600;
     position: relative;
 }
@@ -139,97 +146,147 @@ body {
 }
 
 
-.menu-container hr {
+.menu-header hr {
     border: none;
-    height: 2px;
-    background: #777;
-    margin: 20px 0;
+    height: 3px;
+    background: #42414199;
+    margin: 50px 0;
 }
 
-
-.main-course {
+/* ===================================================================== */
+.menu-container {
     padding: 0 50px;
     text-align: left;
 }
 
-.main-course h1 {
+.menu-container h1 {
     font-size: 44px;
     margin-top: 0;
 }
 
-.main-course-card-container {
+.menu-container-grid {
     display: grid;
-    grid-template-columns: repeat(4, 300px); /* fixed 4 columns na may exact card width */
-    column-gap: 60px; /* pagitan ng columns, adjust mo lang */
-    row-gap: 50px;    /* pagitan ng rows */
-    justify-content: center; /* center ang buong grid */
-    margin: 0 auto;   /* center ang container */
-    padding: 0 20px;  /* padding para sa maliit na screen */
+    grid-template-columns: repeat(4, auto);
+    column-gap: 60px;
+    row-gap: 50px;
+    justify-content: center; 
 }
 
 
-.main-course-card {
+
+
+
+
+/* ===================================================================== */
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0px;
+    row-gap: 15px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.card {
+    width: 325px;
     background-color: #F6E7C0;
-    width: 300px;
-    padding: 10px;
     border-radius: 10px;
-    text-align: left;
-    text-align: justify;
+    overflow: hidden;
     box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
     transition: transform 0.2s ease;
-    display: flex;          /* make card a flex container */
-    flex-direction: column; /* stack content vertically */
-    justify-content: space-between; /* push button to bottom */
-    height: 100%;           /* ensures cards stretch equally in grid */
 }
 
-.main-course-card:hover {
+.card:hover {
     transform: translateY(-8px);
 }
 
-.main-course-card img {
+.card img {
     width: 100%;
-    height: 180px;
+    height: 250px;
     object-fit: cover;
     border-radius: 8px;
     background: #ddd;
 }
 
-.main-course-card h2 {
-    font-size: 20px;
-    margin: 0;
+.card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-.main-course-card p {
+.card-content h3 {
+    font-size: 23px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: black;
     font-size: 15px;
-    margin: 0;
+    line-height: 1.3;
+    text-align: justify;
 }
 
+.card-content .price {
+    color: #666;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
 
-.festive-details-btn {
+.card-content .btn {
     background-color: #2C5439;
-    font-family:"Poppins";
     color: white;
+    font-size: 20px;
     font-weight: 600;
     width: 160px;
     height: 40px;
-    display: block;
-    font-size: 20px;
+    display: block;     
     border-radius: 10px;
     border: none;
-    outline: none;
     cursor: pointer;
+    margin: auto auto 10px auto;
+
     transition: all 0.25s ease;
-    align-self: center; 
-    margin-top: 15px;
 }
 
-.festive-details-btn:hover {
+.card-content .btn:hover {
     transform: scale(1.08) translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
-.main-course-page {
+
+.card-container-PACKAGES {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 325px);
+    column-gap: 100px;
+    row-gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.fav {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 3px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    
+}
+
+
+.page {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
@@ -237,18 +294,79 @@ body {
     margin-top: 50px;
 }
 
+/* ===================================================================== */
 
+.menu-sections{
+    position: relative;
+    overflow: hidden;
 
+}
 
+.menu-section{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
 
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
 
+.menu-section.active{
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+}
 
+.menu-arrows {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    pointer-events: none;  
+}
 
+.menu-arrows button {
+    position: absolute;
+    pointer-events: auto;
+    
+    font-size: 60px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #5c3d2e;
 
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
 
+    display: block;
+    transition: 0.25s;
+}
 
+#arrow-left {
+    left: 50px;
+}
 
+#arrow-right {
+    right: 50px;
+}
 
+.menu-arrows button:hover {
+    transform: scale(1.15);
+    color: red;
+}
+
+.menu-section.slide-left {
+    transform: translateX(-100%);
+}
+
+.menu-section.slide-right {
+    transform: translateX(100%);
+}
 
 
 .menu-decor{
@@ -267,19 +385,240 @@ body {
     z-index: 0;
 }
 
-.banderitas1 img {
-    width: 700px;
+.banderitas3 img {
+    width: 500px;
     height: auto;
 }
 
-.dahon3 {
+.dahon1 {
     position: absolute;
-    top: 120%;
+    top: 70%;
     left: 0%;
     z-index: -1;
 }
 
-.dahon3 img {
-    width: 180px;
+.dahon1 img {
+    width: 200px;
     height: auto;
 }
+
+.spoon-fork {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    z-index: 0;
+}
+
+.spoon-fork img {
+    width: 150px;
+    height: auto;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .menu-arrows {
+        display: none;
+    }
+
+    /* NAV */
+    .top-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .links-container {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: -20px;
+
+        background-color: #E6C69B;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+
+        flex-direction: column;
+        align-items: flex-end; 
+        padding: 10px 20px;     
+        gap: 10px;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .links-container.show {
+        margin-top: -20px;
+        max-height: 300px;
+        padding: 15px 20px; 
+    }
+
+    .nav-link {
+        font-size: 16px;
+        width: auto;         
+        padding: 10px 0px; 
+        text-align: left; 
+    }
+
+    .nav-link::after {
+        left: 0;               
+        bottom: 5px;
+        width: 100%;           
+        height: 5px;          
+        background-color: red;
+        border-radius: 10px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.25s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        transform: scaleX(1);
+    }
+
+
+    /* HEADER */
+    .menu-header h1 {
+        font-size: 28px;
+    }
+
+    .menu-links-container {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+
+        gap: 8px;
+        padding: 12px 10px;
+    }
+
+    .menu-links-container::-webkit-scrollbar {
+        display: none; 
+    }
+
+    .menu-link {
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .menu-container-grid,
+    .card-container-PACKAGES {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        row-gap: 15px;
+        justify-content: center;
+    }
+
+    .card-container-PACKAGES .card:last-child:nth-child(odd) {
+        grid-column: span 2;
+        justify-self: center;
+        width: 200px;
+    }
+    
+
+    .menu-header,
+    .menu-container {
+        padding: 0 20px;
+    }
+
+    .menu-links-container {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card img {
+        height: 140px;
+    }
+
+
+    .card-content {
+        padding: 10px;
+    }
+
+    /* 🔹 title */
+    .card-content h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    /* 🔹 price */
+    .card-content .price {
+        font-size: 13px;
+        margin-bottom: 0px;
+    }
+
+    /* 🔹 description */
+    .card-content p {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    /* 🔹 button */
+    .card-content .btn {
+        width: 100%;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .fav {
+    position: absolute;
+        top: 5px;
+        left: 10px;
+        background-color: #e74c3c;
+        color: white;
+        padding: 3px 10px;
+        font-size: 11px;
+        font-weight: 600;
+        border-radius: 10px;
+    }
+
+
+    .top-nav {
+        padding: 10px 20px;
+    }
+
+    .links-container {
+        gap: 15px;
+    }
+
+    /* ARROWS */
+    #arrow-left {
+        left: 10px;
+    }
+
+    #arrow-right {
+        right: 10px;
+    }
+
+    .menu-arrows button {
+        font-size: 40px;
+    }
+
+    /* DECOR */
+    .banderitas3 img {
+        width: 250px;
+    }
+
+    .dahon3 img {
+        width: 100px;
+    }
+}
+
+
+

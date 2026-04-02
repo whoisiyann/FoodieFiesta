@@ -15,22 +15,25 @@
                 <img src="../assets/images/background_img_design/banderitas_3.png" alt="">
             </div>
 
-            <div class="dahon3">
-                <img src="../assets/images/background_img_design/dahon3.png" alt="">
+            <div class="dahon1">
+                <img src="../assets/images/background_img_design/dahon1.png" alt="">
+            </div>
+
+            <div class="spoon-fork">
+                <img src="../assets/images/background_img_design/spoon-fork.png" alt="">
             </div>
 
         </div>
-
 
 
     <!-- TOP NAV -->
     <nav class="top-nav">
         <div class="logo-container">
             <img src="../assets/images/logo/foodiefiesta_logo.png" alt="FoodieFiesta Logo">
-            <h2 class="logo-name">Foodie Fiesta</h2>
+            <h3 class="logo-name">Foodie Fiesta</h3>
         </div>
-
-        <div class="links-container">
+            <div class="menu-toggle" id="menuToggle">☰</div>
+        <div class="links-container" id="navLinks">
             <a class="nav-link" href="../index.html">Home</a>
             <a class="nav-link active" href="../pages/menu.html">Menu</a>
             <a class="nav-link" href="pages/about.html">About</a>
@@ -39,13 +42,12 @@
     </nav>
 
     <!-- MENU HEADER -->
-    <div class="menu-container">
+    <div class="menu-header">
         <h1>Menu</h1>
 
         <nav>
             <div class="menu-links-container">
                 <a class="menu-link" href="#">Pika-Pika</a>
-                <a class="menu-link" href="#">Appetizers</a>
                 <a class="menu-link active" href="#">Main Course</a>
                 <a class="menu-link" href="#">Desserts</a>
                 <a class="menu-link" href="#">Drinks</a>
@@ -56,78 +58,435 @@
         <hr>
     </div>
 
-    <!-- MAIN COURSE SECTION -->
-    <div class="main-course">
-        <h1>Main Course</h1>
 
-        <div class="main-course-card-container">
+    <!-- MENU SECTIONS WRAPPER -->
+    <div class="menu-sections">
 
-            <div class="main-course-card">
-                <img src="../assets/images/foods/main_course/Lechon_Baboy.png" alt="">
-                <h2>Lechon Baboy</h2>
-                <p>Our crown jewel featuring ultra-crispy skin and succulent, flavorful roasted meat. No Filipino fiesta is ever truly complete without this centerpiece dish.</p>
-                <button class="festive-details-btn">Festive Details</button>
+        <!-- PIKA-PIKA (PAGE 1) -->
+        <div class="menu-section">
+            <div class="menu-container">
+                <h1>Pika-Pika</h1>
+                <div class="menu-container-grid">
+                    <div class="card">
+                        <div class="fav">⭐ Fiesta Favorites</div>
+                        <img src="../assets/images/foods/Pika-Pika/Lumpiang Shanghai.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Lumpiang Shanghai</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Crispy, golden spring rolls packed with savory minced meat. They are the ultimate party starter and a guaranteed crowd favorite.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/Pika-Pika/Kwek-Kwek.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Kwek-Kwek</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Quail eggs coated in a signature orange batter and fried to perfection. Best enjoyed when dipped in our special spiced vinegar sauce.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/Pika-Pika/Fishball.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Fish Balls</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>A classic street-side favorite served with our special sweet and spicy dip. These light bites offer a nostalgic taste of local snacking.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/Pika-Pika/Fried Chicken Skin.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Fried Chicken Skin</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Irresistibly crunchy and seasoned for the ultimate salty, savory snack. It is the perfect guilty pleasure to share with the whole table.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/Pika-Pika/Isaw.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Isaw (Chicken Intestines)</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Char-grilled skewers with a smoky flavor and a tender, unique bite. A must-try street food staple that pairs perfectly with a cold drink.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/Pika-Pika/Barbecue .JPG" alt="">
+                        <div class="card-content">
+                            <h3>BBQ Skewers</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Juicy, marinated pork grilled to perfection with a sweet and savory glaze. Each stick is packed with smoky, tender goodness in every bite.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/Pika-Pika/Tokwa't baboy.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Tokwa’t Baboy</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>A perfect tandem of crispy fried tofu and tender pork in soy-vinegar. This classic side dish offers a delightful balance of crunch and tang.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/Pika-Pika/Calamares.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Calamares</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Lightly battered, crispy squid rings served with a signature tangy dip. These golden rings are the perfect crunchy appetizer for seafood lovers.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="main-course-card">
-                <img src="../assets/images/foods/main_course/Chicken_Inasal.JPG" alt="">
-                <h2>Chicken Inasal</h2>
-                <p>Bacolod-style grilled chicken marinated in lemongrass, ginger, and achiote oil. It is charred to perfection for a smoky and authentic regional taste.</p>
-                <button class="festive-details-btn">Festive Details</button>
+        <!-- MAIN COURSE (PAGE 2 - DEFAULT) -->
+        <div class="menu-section active">
+            <div class="menu-container">
+                <h1>Main Course</h1>
+                <div class="menu-container-grid">
+                    <div class="card">
+                        <div class="fav">⭐ Fiesta Favorites</div>
+                        <img src="../assets/images/foods/main_course/Lechon_Baboy.png" alt="">
+                        <div class="card-content">
+                            <h3>Lechon Baboy</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Our crown jewel featuring ultra-crispy skin and succulent, flavorful roasted meat. No Filipino fiesta is ever truly complete without this centerpiece dish.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/main_course/Chicken_Inasal.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Chicken Inasal</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Bacolod-style grilled chicken marinated in lemongrass, ginger, and achiote oil. It is charred to perfection for a smoky and authentic regional taste.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/main_course/Pork_Barbecue.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Pork Barbecue</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Tender pork slices on sticks, grilled with a thick and savory-sweet sauce. These skewers are a nostalgic staple for any festive gathering.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/main_course/Beef_Caldereta.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Beef Caldereta</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Hearty beef stew simmered in a rich tomato sauce with peppers and cheese. It is a savory, melt-in-your-mouth classic that feels like a warm hug.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/main_course/Pork_Adobo.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Pork Adobo</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>The iconict Filipino classic of pork braised in soy sauce, vinegar, and garlic. Its savory and tangy profile makes it a timeless favorite for everyone.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/main_course/Kare-Kare.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Kare-Kare</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Tender meat and fresh vegetables stewed in a thick, creamy peanut sauce. Serve it with a side of bagoong for the ultimate flavor experience.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/main_course/Sinigang_na_Baboy.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Sinigang na Baboy</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>A comforting, sour tamarind broth loaded with tender pork and garden vegetables. It is the perfect soul-warming dish for any time of day.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="fav">⭐ Fiesta Favorites</div>
+                        <img src="../assets/images/foods/main_course/Pancit_Bihon.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Pancit Bihon</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Stir-fried rice noodles tossed with fresh vegetables and savory bits of meat. This dish represents long life and is a staple at every celebration.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="main-course-card">
-                <img src="../assets/images/foods/main_course/Pork_Barbecue.JPG" alt="">
-                <h2>Pork Barbecue</h2>
-                <p>Tender pork slices on sticks, grilled with a thick and savory-sweet sauce. These skewers are a nostalgic staple for any festive gathering.</p>
-                <button class="festive-details-btn">Festive Details</button>
+        <!-- DESSERTS -->
+        <div class="menu-section">
+            <div class="menu-container">
+                <h1>Desserts</h1>
+                <div class="menu-container-grid">
+                    <div class="card">
+                        <div class="fav">⭐ Fiesta Favorites</div>
+                        <img src="../assets/images/foods/desserts/Halo-Halo.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Halo-Halo</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>The ultimate Filipino cooler featuring shaved ice, creamy milk, and sweet toppings. It is a colorful explosion of textures and flavors in one glass.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/desserts/Leche_flan.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Leche Flan</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Velvety smooth, melt-in-your-mouth custard topped with a golden caramel glaze. This rich and creamy dessert is the perfect way to end a meal.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/desserts/Ube_Halaya.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Ube Halaya</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Creamy, slow-cooked purple yam jam—a true and vibrant Filipino treasure. Enjoy the naturally sweet and earthy flavors of this traditional favorite..</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/desserts/Turon.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Turon</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p> Sweet saba bananas and jackfruit wrapped and fried in a crisp sugar glaze. It is a crunchy, hot, and sweet snack that everyone loves.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/desserts/Biko.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Biko</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Sweet, sticky rice cake topped with a layer of toasted coconut curd. This chewy traditional treat is a staple for any afternoon merienda.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/desserts/Cassava_Cake.png" alt="">
+                        <div class="card-content">
+                            <h3>Cassava Cake</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>A moist, chewy cake made from grated cassava and rich coconut milk. Its creamy texture and toasted topping make it hard to resist.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="fav">⭐ Fiesta Favorites</div>
+                        <img src="../assets/images/foods/desserts/Mango_Float.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Mango Float</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Layered Graham crackers, whipped cream, and sweet, ripe Manila mangoes. This chilled dessert is a refreshing and creamy tropical delight.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/desserts/Sapin-Sapin.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Sapin-Sapin</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Colorful, multi-layered glutinous rice cake with distinct, delightful flavors. Each layer offers a different taste of traditional Filipino sweetness.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="main-course-card">
-                <img src="../assets/images/foods/main_course/Beef_Caldereta.JPG" alt="">
-                <h2>Beef Caldereta</h2>
-                <p>Hearty beef stew simmered in a rich tomato sauce with peppers and cheese. It is a savory, melt-in-your-mouth classic that feels like a warm hug.</p>
-                <button class="festive-details-btn">Festive Details</button>
+        <!-- DRINKS -->
+        <div class="menu-section">
+            <div class="menu-container">
+                <h1>Drinks</h1>
+                <div class="menu-container-grid">
+                    <div class="card">
+                        <img src="../assets/images/foods/drinks/Iced_Tea.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Iced Tea</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Our signature house blend—perfectly chilled, sweet, and incredibly refreshing. It is the classic choice to balance out a savory festive feast.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/drinks/Calamansi_Juice.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Calamansi Juice</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>A zingy, citrusy thirst-quencher packed with fresh flavor and Vitamin C. This local lemonade alternative provides a bright and tangy kick.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/drinks/Mango_Juice.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Mango Juice</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Thick and luscious juice made from perfectly ripe, golden Manila mangoes. Experience the pure taste of the tropics in every refreshing sip.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/drinks/Pineapple_Juice.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Pineapple Juice</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Tropical sunshine in a glass that is pure, sweet, and tangy. This vibrant drink is the perfect companion for a heavy main course.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/drinks/Buko_Juice.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Buko Juice</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Refreshing, naturally sweet coconut water—the true taste of the islands. It is a light and hydrating choice for a hot fiesta afternoon.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/drinks/Softdrinks.png" alt="">
+                        <div class="card-content">
+                            <h3>Soft Drinks</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Your favorite ice-cold carbonated classics to cut through the meal's richness. These fizzy favorites are always served chilled for maximum refreshment.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/drinks/Sago't_Gulaman.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Sago’t Gulaman</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>A nostalgic brown sugar cooler filled with chewy pearls and sweet jelly. This traditional street drink is the ultimate sweet thirst-quencher.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/drinks/Coffee.png" alt="">
+                        <div class="card-content">
+                            <h3>Coffee</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>A bold and aromatic brew designed to perfectly balance your festive meal. Enjoy it hot or over ice for a smooth, caffeinated finish.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="main-course-card">
-                <img src="../assets/images/foods/main_course/Pork_Adobo.JPG" alt="">
-                <h2>Pork Adobo</h2>
-                <p>The iconic Filipino classic of pork braised in soy sauce, vinegar, and garlic. Its savory and tangy profile makes it a timeless favorite for everyone.</p>
-                <button class="festive-details-btn">Festive Details</button>
+        <!-- PACKAGES -->
+        <div class="menu-section">
+            <div class="menu-container">
+                <h1>Packages</h1>
+                <div class="card-container-PACKAGES">
+                    <div class="card">
+                        <img src="../assets/images/foods/fiesta_packages/Relapse_set.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Relapse Box</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>"Diet starts tomorrow!" The ultimate barkada sampler featuring your favorite Pika-Pika and deep-fried cravings. It is the perfect companion for late-night chika and broken resolutions with the whole squad.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/fiesta_packages/Sharon_Set.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Sharon Box</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>For the grand milestones where "balot" is mandatory! This massive feast includes our premium Lechon and a variety of signature mains to feed a crowd. It is big enough to celebrate the moment and still have enough for tomorrow’s lunch.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="../assets/images/foods/fiesta_packages/Hapunan_set.JPG" alt="">
+                        <div class="card-content">
+                            <h3>Hapunan Box</h3>
+                            <p class="price">₱ 200.00</p>
+                            <p>Bring the warmth of a home-cooked Filipino dinner directly to your family table. This set offers a balanced mix of comforting stews, rice, and refreshing drinks for a hassle-free evening. It is the perfect way to enjoy quality time over a delicious, hearty meal.</p>
+                            <button class="btn">Festive Details</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="main-course-card">
-                <img src="../assets/images/foods/main_course/Kare-Kare.JPG" alt="">
-                <h2>Kare-Kare</h2>
-                <p>Tender meat and fresh vegetables stewed in a thick, creamy peanut sauce. Serve it with a side of bagoong for the ultimate flavor experience.</p>
-                <button class="festive-details-btn">Festive Details</button>
-            </div>
-
-            <div class="main-course-card">
-                <img src="../assets/images/foods/main_course/Sinigang_na_Baboy.JPG" alt="">
-                <h2>Sinigang na Baboy</h2>
-                <p>A comforting, sour tamarind broth loaded with tender pork and garden vegetables. It is the perfect soul-warming dish for any time of day.</p>
-                <button class="festive-details-btn">Festive Details</button>
-            </div>
-
-            <div class="main-course-card">
-                <img src="../assets/images/foods/main_course/Pancit_Bihon.JPG" alt="">
-                <h2>Pancit Bihon</h2>
-                <p>Stir-fried rice noodles tossed with fresh vegetables and savory bits of meat. This dish represents long life and is a staple at every celebration.</p>
-                <button class="festive-details-btn">Festive Details</button>
-            </div>
-
+        <!-- PAGE INDICATOR -->
+        <div class="page">
+            <p id="page-indicator">Page 2 of 5</p>
         </div>
     </div>
 
-    <div class="main-course-page">
-        <p>Page 1 of 5</p>
+    <!-- ARROWS -->
+    <div class="menu-arrows">
+        <button id="arrow-left">&#9664;</button>
+        <button id="arrow-right">&#9654;</button>
     </div>
-    
+
 
 
     <script src="../assets/js/menu.js"></script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

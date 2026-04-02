@@ -33,3 +33,27 @@ function toggleMenu() {
 //         e.preventDefault();
 //     }
 // });
+
+
+
+/* ANIMATION SCROLL EFFECT */
+const revealElements = document.querySelectorAll(
+    ".handang-pinoy-container, .handaan-highlight-container, .fiesta-packages-container, .card"
+);
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+        } else {
+            entry.target.classList.remove("active");
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+revealElements.forEach((el) => {
+    el.classList.add("reveal");
+    observer.observe(el);
+});
