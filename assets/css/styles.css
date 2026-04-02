@@ -451,14 +451,17 @@ section,
     background-color: #2C5439;
     font-family:"Poppins";
     color: white;
-    font-weight: 600;
+    font-weight: bold;
     width: 160px;
     height: 40px;
-    display: block;
+    display: flex;      
+    justify-content: center; 
+    align-items: center;        
     margin: 15px auto 0 auto;
     font-size: 20px;
     border-radius: 10px;
     border: none;
+    text-decoration: none;
     outline: none;
     cursor: pointer;
     transition: all 0.25s ease;
@@ -594,7 +597,7 @@ section,
 
     .handang-pinoy-img-card img {
         width: 100%;
-        max-width: 200px;
+        max-width: 160px;
         height: auto;
         
     }
@@ -612,6 +615,7 @@ section,
     .handaan-highlight-card .card:last-child:nth-child(odd) {
         grid-column: span 2;
         justify-self: center;
+        width: 200px;
         
     }
 
@@ -650,28 +654,67 @@ section,
         text-align: justify;
     }
 
-    /* DECORATIONS */
-    .handang-pinoy-decor {
-        display: block; 
-        transform: scale(1); 
-        transform-origin: top right;
+
+    /* ===== MOBILE DECORATION ===== */
+
+    .banderitas1 img{
+        width:300px;   
     }
 
-    .banderitas1 img,
-    .banderitas2 img,
-    .bilao img,
-    .dahon1 img,
-    .spon-fork img,
-    .dahon2 img {
-        width: auto;
-        max-width: 200px; 
-        height: auto;
+    .banderitas1{
+        top:-20%;       
+        right:-10%;   
     }
 
-    .dahon2 {
-        top: 570%; 
-        right: 0px; 
-        z-index: -1; 
+
+    .banderitas2 img{
+        width:250px;
     }
+
+    .banderitas2{
+        top:99%;
+        left:-20%;
+    }
+
+
+    .bilao img{
+        width:90px;
+    }
+
+    .bilao{
+        top:105%;
+        right:-5%;
+    }
+
+
+    .dahon1 img{
+        width:150px;
+    }
+
+    .dahon1{
+        top:350%;
+        left:-8%;
+    }
+
+
+    .spon-fork img{
+        width:110px;
+    }
+
+    .spon-fork{
+        top:350%;
+        right:-5%;
+    }
+
+
+    .dahon2 img{
+        width:110px;
+    }
+
+    .dahon2{
+        top:690%;
+        right: 0%;
+    }
+
 }
 
