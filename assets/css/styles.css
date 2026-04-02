@@ -615,7 +615,6 @@ section,
     .handaan-highlight-card .card:last-child:nth-child(odd) {
         grid-column: span 2;
         justify-self: center;
-        width: 200px;
         
     }
 
@@ -663,7 +662,7 @@ section,
 
     .banderitas1{
         top:-20%;       
-        right:-10%;   
+        right:0%;   
     }
 
 
@@ -683,7 +682,7 @@ section,
 
     .bilao{
         top:105%;
-        right:-5%;
+        right:0%;
     }
 
 
@@ -703,7 +702,7 @@ section,
 
     .spon-fork{
         top:350%;
-        right:-5%;
+        right:0%;
     }
 
 
