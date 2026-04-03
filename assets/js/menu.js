@@ -30,7 +30,7 @@ const leftBtn = document.getElementById("arrow-left");
 const rightBtn = document.getElementById("arrow-right");
 const menuLinks = document.querySelectorAll(".menu-link");
 
-let currentIndex = 1;
+let currentIndex = 0;
 
 
 // GET SECTION FROM URL
