@@ -3,9 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/logo/foodiefiesta_logo.png">
+    <title>Foodie Fiesta About</title>
 </head>
-<body>
+<body> 
+    <nav>
+        <div class="logo-container">
+            <img src="../assets/images/logo/foodiefiesta_logo.png" alt="FoodieFiesta Logo">
+            <h2 class="logo-name">Foodie Fiesta</h2>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <div class="links-container" id="navLinks">
+            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="menu.html">Menu</a>
+            <a class="nav-link active" href="about.html">About</a>
+            <a class="nav-link" href="contact.html">Contact us</a>
+        </div>
+    </nav>
+
+    <section class="about-hero">
+        <h1>About the Website</h1>
+        <p>Born from a vision to digitize the Filipino festive spirit, Foodie Fiesta serves as a comprehensive guide to the flavors that define our culture. We prioritize aesthetic appeal and user-centric functionality to ensure that every interaction—from browsing crispy Pika-Pika to selecting a grand Sharon Box—is a joyful experience. Our team is dedicated to preserving the "bayanihan" spirit through a modern, tech-forward approach to food discovery.</p>
+    </section>
+
+    <section class="team-section">
+        <h1>The Team behind Foodie Fiesta</h1>
+        <p>Each person has showcased their skills through patience, analysis, and creativity.</p>
+
+        <div class="team-cards">
+                <article class="team-card">
+                    <a href="https://whoisiyann.github.io/Portfolio/" target="_blank" class="card-link">
+                        <div class="left-side">
+                            <img src="../assets/images/aboutUs_assets/ianjunio.png" alt="Ian Christopher Junio">
+                        </div>
+                        <div class="right-side" style="background-image: url('../assets/images/aboutUs_assets/Ian.png');">
+                            <div class="team-content">
+                                <h3>Ian Christopher Junio</h3>
+                                <h4>Project Manager | Developer</h4>
+                                <p>Ian serves as the primary strategist for Foodie Fiesta, overseeing the project’s lifecycle from conceptualization to final deployment. He successfully balances technical development with high-level planning to ensure every feature aligns with the team's vision.</p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            
+            <article class="team-card">
+                <a href="#"target="_blank" class="card-link">
+                    <div class="left-side">
+                        <img src="../assets/images/aboutUs_assets/haha.png" alt="Rainan Orte">
+                    </div>
+                    <div class="right-side" style="background-image: url('../assets/images/aboutUs_assets/Rainan.png');">
+                        <div class="team-content">
+                            <h3>Rainan Orte</h3>
+                            <h4>Asst Project Manager & Developer</h4>
+                            <p>Rainan plays a vital role in bridging the gap between project management and technical implementation. He ensures that the development workflow remains efficient and that every functional component contributes to a seamless user experience.</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="team-card">
+                <a href="#"target="_blank" class="card-link">
+                    <div class="left-side">
+                        <img src="../assets/images/aboutUs_assets/haha.png" alt="Bryan Josef Sarmiento">
+                    </div>
+                    <div class="right-side" style="background-image: url('../assets/images/aboutUs_assets/Bryan.png');">
+                        <div class="team-content">
+                            <h3>Bryan Josef Sarmiento</h3>
+                            <h4>Head UI/UX Designer</h4>
+                            <p>Bryan is responsible for the overall aesthetic and digital interface of the application, focusing on intuitive navigation and visual harmony. He meticulously crafted the menu layouts to make the process of food discovery both easy and engaging for the user.</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="team-card">
+                <a href="#" target="_blank" class="card-link">
+                    <div class="left-side">
+                        <img src="../assets/images/aboutUs_assets/haha.png" alt="Tiffany Biacan">
+                    </div>
+                    <div class="right-side" style="background-image: url('../assets/images/aboutUs_assets/Tiff.png');">
+                        <div class="team-content">
+                            <h3>Tiffany Biacan</h3>
+                            <h4>Graphic Designer</h4>
+                            <p>iffany brings the brand’s festive identity to life through vibrant visual assets and creative design elements. Her work ensures that the application maintains a consistent, celebratory atmosphere that honors its Filipino cultural roots. </p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="team-card">
+                <a href="#" target="_blank" class="card-link">
+                    <div class="left-side">
+                        <img src="../assets/images/aboutUs_assets/haha.png" alt="Marc Renjo">
+                    </div>
+                    <div class="right-side" style="background-image: url('../assets/images/aboutUs_assets/Renjo.png');">
+                        <div class="team-content">
+                            <h3>Marc Renjo</h3>
+                            <h4>Documentation Specialist</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </section>
+
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h1>Foodie Fiesta</h1>
+                <p class="footer-des">We believe that every meal should feel like a celebration. Our platform is dedicated to preserving Filipino culinary traditions while making them accessible in the digital age.</p>
+                <h2>Follow the feast:</h2>
+                <div class="social-links">
+                    <a href="https://i.pinimg.com/originals/c6/be/31/c6be31798290f5e15f8cb394449355f1.jpg" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://i.pinimg.com/originals/c6/be/31/c6be31798290f5e15f8cb394449355f1.jpg" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://i.pinimg.com/originals/c6/be/31/c6be31798290f5e15f8cb394449355f1.jpg" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Our Menu</h3>
+                <ul>
+                    <li><a href="menu.html?section=0">Pika-Pika</a></li>
+                    <li><a href="menu.html?section=1">Main Course</a></li>
+                    <li><a href="menu.html?section=2">Desserts</a></li>
+                    <li><a href="menu.html?section=3">Drinks</a></li>
+                    <li><a href="menu.html?section=4">Packages</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <div class="contact">
+                    <h3>Contact Us</h3> 
+                    <p><i class="fa-solid fa-envelope"></i> hello@foodiefiesta.com</p>
+                    <p><i class="fa-solid fa-envelope"></i> support@foodiefiesta.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +63 912 345 6789</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Dagupan City, Pangasinan</p>
+                </div>
+                <button class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"><i class="fa-solid fa-angles-up"></i> Back to the top</button>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Foodie Fiesta. All rights reserved.</div>
+
+    </footer>
+
+
+    <div class="dahon">
+        <img src="../assets/images/aboutUs_assets/dahon.png" alt="">
+    </div>
+
+    <script src="../assets/js/about.js"></script>
 
 </body>
 </html>

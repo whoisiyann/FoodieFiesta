@@ -22,10 +22,9 @@ function toggleMenu() {
 }
 
 
-
 // ANIMATION SCROLL EFFECT
 const revealElements = document.querySelectorAll(
-    ".handang-pinoy-container, .handaan-highlight-container, .fiesta-packages-container, .card"
+    ".team-section, .team-cards, .team-card, .card"
 );
 
 const observer = new IntersectionObserver((entries) => {
@@ -44,19 +43,3 @@ revealElements.forEach((el) => {
     el.classList.add("reveal");
     observer.observe(el);
 });
-
-
-
-// PREVENT ZOOMING
-// document.addEventListener('wheel', function(e) {
-//     if (e.ctrlKey) {
-//         e.preventDefault();
-//     }
-// }, { passive: false });
-
-
-// document.addEventListener('keydown', function(e) {
-//     if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=')) {
-//         e.preventDefault();
-//     }
-// });

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/images/logo/foodiefiesta_logo.png">
     <title>Foodie Fiesta</title>
 </head>
@@ -15,10 +16,8 @@
             <h2 class="logo-name">Foodie Fiesta</h2>
         </div>
 
-        <div class="menu-toggle" onclick="toggleMenu()">
-            ☰
-        </div>
-
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        
         <div class="links-container" id="navLinks">
             <a class="nav-link active" href="index.html">Home</a>
             <a class="nav-link" href="pages/menu.html">Menu</a>
@@ -186,6 +185,45 @@
 
 
 
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h1>Foodie Fiesta</h1>
+                <p class="footer-des">We believe that every meal should feel like a celebration. Our platform is dedicated to preserving Filipino culinary traditions while making them accessible in the digital age.</p>
+                <h2>Follow the feast:</h2>
+                <div class="social-links">
+                    <a href="https://i.pinimg.com/originals/c6/be/31/c6be31798290f5e15f8cb394449355f1.jpg" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://i.pinimg.com/originals/c6/be/31/c6be31798290f5e15f8cb394449355f1.jpg" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://i.pinimg.com/originals/c6/be/31/c6be31798290f5e15f8cb394449355f1.jpg" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Our Menu</h3>
+                <ul>
+                    <li><a href="pages/menu.html?section=0">Pika-Pika</a></li>
+                    <li><a href="pages/menu.html?section=1">Main Course</a></li>
+                    <li><a href="pages/menu.html?section=2">Desserts</a></li>
+                    <li><a href="pages/menu.html?section=3">Drinks</a></li>
+                    <li><a href="pages/menu.html?section=4">Packages</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <div class="contact">
+                    <h3>Contact Us</h3> 
+                    <p><i class="fa-solid fa-envelope"></i> hello@foodiefiesta.com</p>
+                    <p><i class="fa-solid fa-envelope"></i> support@foodiefiesta.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +63 912 345 6789</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Dagupan City, Pangasinan</p>
+                </div>
+                <button class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"><i class="fa-solid fa-angles-up"></i> Back to the top</button>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Foodie Fiesta. All rights reserved.</div>
+
+    </footer>
 
 </body>
 </html>

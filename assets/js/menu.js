@@ -1,3 +1,4 @@
+// NAVBAR HIDE ON SCROLL
 let lastScroll = 0;
 const navbar = document.querySelector(".top-nav");
 
@@ -22,7 +23,7 @@ toggle.addEventListener("click", () => {
     links.classList.toggle("show");
 });
 
-
+// CLOSE MENU ON LINK CLICK
 const sections = document.querySelectorAll(".menu-section");
 const pageText = document.getElementById("page-indicator");
 const leftBtn = document.getElementById("arrow-left");
@@ -39,9 +40,10 @@ const sectionFromURL = params.get("section");
 if (sectionFromURL !== null) {
     currentIndex = parseInt(sectionFromURL);
 }
-
 updateMenu();
 
+
+// UPDATE MENU FUNCTION
 function updateMenu(direction = "right") {
 
     sections.forEach((sec, index) => {
@@ -49,19 +51,12 @@ function updateMenu(direction = "right") {
         sec.classList.remove("active", "slide-left", "slide-right");
 
         if(index === currentIndex){
-
             sec.classList.add("active");
-
         } else if(index < currentIndex){
-
             sec.classList.add("slide-left");
-
         } else {
-
             sec.classList.add("slide-right");
-
         }
-
     });
 
     pageText.textContent = `Page ${currentIndex + 1} of ${sections.length}`;
@@ -78,7 +73,6 @@ rightBtn.addEventListener("click", () => {
         updateMenu("right");
     }
 });
-
 
 // LEFT ARROW
 leftBtn.addEventListener("click", () => {
@@ -97,7 +91,7 @@ menuLinks.forEach((link, index) => {
     });
 });
 
-
+// SWIPE FUNCTIONALITY
 let startX = 0;
 let endX = 0;
 
@@ -128,6 +122,7 @@ if (sectionsContainer) {
     });
 }
 
+// HANDLE SWIPE
 function handleSwipe() {
     const threshold = 50;
 
@@ -137,6 +132,31 @@ function handleSwipe() {
         prevPage(); // swipe right
     }
 }
+
+
+
+
+// ANIMATION SCROLL EFFECT
+const revealElements = document.querySelectorAll(
+    ".handang-pinoy-container, .handaan-highlight-container, .fiesta-packages-container, .card"
+);
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+        } else {
+            entry.target.classList.remove("active");
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+revealElements.forEach((el) => {
+    el.classList.add("reveal");
+    observer.observe(el);
+});
 
 
 
