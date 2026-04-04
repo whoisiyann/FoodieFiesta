@@ -383,12 +383,12 @@
     }
 
     .price {
-        font-size: 26px;
+        font-size: 25px !important;
     }
 
     .price-note {
-        font-size: 12px;
-    }
+        font-size: 13px !important;
+    }   
 
     .portion-buttons {
         flex-direction: column;

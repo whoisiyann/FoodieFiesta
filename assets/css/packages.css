@@ -395,8 +395,12 @@ body {
     }
 
     .price {
-        font-size: 28px;
+        font-size: 25px !important;
     }
+
+    .price-note {
+        font-size: 13px !important;
+    }   
 
     .portion-buttons {
         flex-direction: column;
