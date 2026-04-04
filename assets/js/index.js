@@ -18,7 +18,9 @@ window.addEventListener("scroll", () => {
 
 function toggleMenu() {
     const nav = document.getElementById("navLinks");
+    const toggle = document.querySelector(".menu-toggle");
     nav.classList.toggle("show");
+    toggle.classList.toggle("active");
 }
 
 
@@ -43,6 +45,25 @@ const observer = new IntersectionObserver((entries) => {
 revealElements.forEach((el) => {
     el.classList.add("reveal");
     observer.observe(el);
+});
+
+
+// Handle handaan highlight card clicks
+document.querySelectorAll('.handaan-highlight-card .card[data-id]').forEach(card => {
+    card.addEventListener('click', function() {
+        const itemId = this.getAttribute('data-id');
+        localStorage.setItem('selectedItem', itemId);
+        window.location.href = 'pages/viewDetails.html';
+    });
+});
+
+// Handle package button clicks
+document.querySelectorAll('.fiesta-packages-card .btn[data-id]').forEach(button => {
+    button.addEventListener('click', function() {
+        const itemId = this.getAttribute('data-id');
+        localStorage.setItem('selectedItem', itemId);
+        window.location.href = 'pages/packagesDetails.html';
+    });
 });
 
 

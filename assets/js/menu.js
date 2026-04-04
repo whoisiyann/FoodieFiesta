@@ -21,6 +21,7 @@ const links = document.getElementById("navLinks");
 
 toggle.addEventListener("click", () => {
     links.classList.toggle("show");
+    toggle.classList.toggle("active");
 });
 
 // CLOSE MENU ON LINK CLICK
@@ -33,12 +34,21 @@ const menuLinks = document.querySelectorAll(".menu-link");
 let currentIndex = 0;
 
 
-// GET SECTION FROM URL
+// MENU NAVATION
 const params = new URLSearchParams(window.location.search);
 const sectionFromURL = params.get("section");
 
 if (sectionFromURL !== null) {
+    // URL parameter takes priority
     currentIndex = parseInt(sectionFromURL);
+    // Save this selection
+    localStorage.setItem("selectedSection", currentIndex);
+} else {
+    // Check if there's a saved section in localStorage
+    const savedSection = localStorage.getItem("selectedSection");
+    if (savedSection !== null) {
+        currentIndex = parseInt(savedSection);
+    }
 }
 updateMenu();
 
@@ -156,6 +166,54 @@ const observer = new IntersectionObserver((entries) => {
 revealElements.forEach((el) => {
     el.classList.add("reveal");
     observer.observe(el);
+});
+
+
+
+// ============ GET CATEGORY FROM CURRENT SECTION ============
+function getCategoryFromCurrentSection() {
+    const categories = ["pika-pika", "main-course", "desserts", "drinks", "packages"];
+    return categories[currentIndex] || "pika-pika";
+}
+
+// ============ FESTIVE DETAILS BUTTON FUNCTION ============
+function handleFestiveDetailsClick(event) {
+    event.preventDefault();
+
+    const button = event.currentTarget;
+    const card = button.closest(".card");
+
+    if (!card) return;
+
+    const itemId = card.dataset.id;
+
+    if (!itemId) {
+        console.error("No data-id found on card:", card);
+        return;
+    }
+
+    const category = getCategoryFromCurrentSection();
+
+    // Save both the item ID and current section for state preservation
+    localStorage.setItem("selectedItem", itemId);
+    localStorage.setItem("selectedSection", currentIndex);
+
+    console.log("Saved ID:", itemId, "Section:", currentIndex); // debug
+
+    if (category === "packages") {
+        window.location.href = "packagesDetails.html";
+    } else {
+        window.location.href = "viewDetails.html";
+    }
+}
+
+// Attach click handlers to all "Festive Details" buttons
+document.addEventListener("DOMContentLoaded", () => {
+    const festiveButtons = document.querySelectorAll(".btn");
+    
+    festiveButtons.forEach(button => {
+        button.addEventListener("click", handleFestiveDetailsClick);
+    });
 });
 
 

@@ -18,7 +18,9 @@ window.addEventListener("scroll", () => {
 
 function toggleMenu() {
     const nav = document.getElementById("navLinks");
+    const toggle = document.querySelector(".menu-toggle");
     nav.classList.toggle("show");
+    toggle.classList.toggle("active");
 }
 
 

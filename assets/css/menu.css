@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: "Poppins";
     padding-top: 80px;
+    background-color: #fffee8;
 }
 
 /* ===================TOP NAV======================= */
@@ -33,6 +34,11 @@ body {
     display: none;
     font-size: 30px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle.active {
+    transform: rotate(-90deg);
 }
 
 .logo-container {
